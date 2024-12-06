@@ -71,7 +71,7 @@ https://mp.weixin.qq.com/s/oFQ7diS-Cop_KdVEmtgVkg
 [万字测评！18个主流大模型深度评测，读懂AI现状【深度模评03】_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1RA4m1V74W/?spm_id_from=333.999.0.0&vd_source=ef3d0316413a4a46bd8095218afbe330)
 [Turing-Project/LLMScenarioEval: Scenario-based Evaluation dataset for LLM (beta) (github.com)](https://github.com/Turing-Project/LLMScenarioEval?tab=readme-ov-file)
 
-![302486255-4edce67d-bdf9-4e5f-906d-94542f61b0de](img\302486255-4edce67d-bdf9-4e5f-906d-94542f61b0de.png)
+![302486255-4edce67d-bdf9-4e5f-906d-94542f61b0de](img/302486255-4edce67d-bdf9-4e5f-906d-94542f61b0de.png)
 
 利用LLM Prompt统计回答率, 计算平均值.
 
@@ -82,11 +82,11 @@ https://mp.weixin.qq.com/s/oFQ7diS-Cop_KdVEmtgVkg
    2. 可使用"它违反了任何法律或法规吗?", 以更准确地判断在犯罪和非法活动场景中的安全性
    3. 上下文学习也可以提高评估的准确性。在提示模板中添加1到3个示例可以帮助LLM更好地理解评估任务的定义。
 
-![image-20240625110646732](img\eva_prompts.png)
+![image-20240625110646732](img/eva_prompts.png)
 
 4. 通过如下公式进行计算得分
 
-![image-20240625110646732](img\image-20240625110646732.png)
+![image-20240625110646732](img/image-20240625110646732.png)
 
 > [!NOTE]
 >
@@ -136,7 +136,7 @@ lm_eval --model hf \
 	--batch_size 8
 ```
 
-![Screenshot from 2024-06-27 12-16-15](img\Screenshot from 2024-06-27 12-16-15.png)
+![Screenshot from 2024-06-27 12-16-15](img/Screenshot from 2024-06-27 12-16-15.png)
 
 官方demo, 下载72G的`gpt-j-6B`模型运行后会报GPU memory out错误. 而Phi-3-mini-4k-instruct、Qwen1.5-4B等可运行并生成ACC
 
@@ -216,9 +216,9 @@ lm_eval --model hf --model_args pretrained=./meta-llama/Meta-Llama-3-8B --tasks 
 ##### 1. 官网评测
   官网评测时间很久，有排队机制， 而且是托管的模型. 
 
-![image-20240607141303073](img\image-20240607141303073.png)
+![image-20240607141303073](img/image-20240607141303073.png)
 
-![image-20240607141133875](img\image-20240607141133875.png)
+![image-20240607141133875](img/image-20240607141133875.png)
 
 #####  2. 本地运行
 
@@ -260,7 +260,7 @@ models = [
 >
 > 下面使用的模型为qwen1.5_4b, `cuda.OutOfMemoryError`, need to resize batch_size to 4
 
-![image-20240618132147584](img\Screenshot from 2024-07-09 12-09-59.png)
+![image-20240618132147584](img/Screenshot from 2024-07-09 12-09-59.png)
 
 - 参考:
   [使用 OpenCompass 对大模型进行测评 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv29545340/)
@@ -358,7 +358,7 @@ print()
 df 
 ````
 
-![image-20240618132147584](img\Screenshot from 2024-07-09 12-18-11.png)
+![image-20240618132147584](img/Screenshot from 2024-07-09 12-18-11.png)
 
 ### Use LLM Prompt to Unit Test
 
@@ -421,15 +421,15 @@ def query_and_validate(question: str, expected_response: str):
 
   [【AI大模型应用开发】【LangSmith: 生产级AI应用维护平台】0. 一文全览Tracing功能，让程序运行过程一目了然 (qq.com)](https://mp.weixin.qq.com/s?__biz=MzkxNjYyMjkwMQ==&mid=2247484849&idx=1&sn=4047fe0d6f070c1871961c4ab5b531b8&chksm=c14c5eebf63bd7fd00f229ace9b1dd392b71fb85009ee6be41b2626dd534b1a7e0bbaab3fe7d&scene=21)
 
-![image-20240614144634669](img\image-20240614144634669.png)
+![image-20240614144634669](img/image-20240614144634669.png)
 
 - 需要设置自己的openai_key，但是GPT官网163邮箱也注册不了，我觉得这个也要钱
 
-![image-20240614144442209](img\image-20240614144442209.png)
+![image-20240614144442209](img/image-20240614144442209.png)
 
 - langsmith我看也是要收费的，额度是5000的trace日志追踪.
 
-![image-20240614150106195](img\image-20240614150106195.png)
+![image-20240614150106195](img/image-20240614150106195.png)
 
 ### Ragas
 #### 官方demo
@@ -547,7 +547,7 @@ score.to_pandas()
 
 ##### 执行evaluate()验证数据集
 `Ollama`方式可以打印Ragas指标，其他方式可能受限于显存的原因 (torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 36.00 MiB. GPU).GPU使用率用`nvidia-smi dmon`查看. 
-![image-20240618110211315](img\Screenshot from 2024-07-09 12-57-21.png)
+![image-20240618110211315](img/Screenshot from 2024-07-09 12-57-21.png)
 
 其他报错信息:
 
@@ -819,7 +819,7 @@ giskard_model = giskard.Model(
 scan_results = giskard.scan(giskard_model)
 ```
 
-![image-20240621155315980](img\image-20240621155315980.png)
+![image-20240621155315980](img/image-20240621155315980.png)
 
 ***部分代码***
 https://github.com/Giskard-AI/giskard/blob/e724a9f5d7d90e88c1575cdb06ccd573548f033b/giskard/llm/client/__init__.py#L45

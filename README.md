@@ -10,7 +10,7 @@
 
 - LLM.md
 
-​	总结了一些如何评估`llm`以及`RAG`的方法
+  总结了一些如何评估`llm`以及`RAG`的方法
 
 
 
@@ -20,4 +20,4 @@
 
 如果对你有帮助的话，可点个star或者打赏.
 
-<img src="img\1.jpg" alt="2ae1b47c4989b2eac835e882d8fe46f" style="zoom: 50%;" />
+<img src="img/1.jpg" alt="2ae1b47c4989b2eac835e882d8fe46f" style="zoom: 50%;" />
